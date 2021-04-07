@@ -5,8 +5,9 @@
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
     "start": "node buildScripts/srcServer.js",
-    "share": "lt --port 3080",
-    "share02": "lt --port 3000 -h 'https://serverless.social' -s myhost"
+    "localtunnel01": "lt --port 3080",
+    "localtunnel02": "lt --port 3000 -h 'https://serverless.social' -s me00243070421",
+    "share": "npm-run-all --parallel start localtunnel02"
   },
   "author": "Cory House",
   "license": "MIT",
