@@ -4,10 +4,12 @@
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "babel-node buildScripts/srcServer.js",
+    "start": "babel-node buildScripts/srcServer.js lint:watch",
     "localtunnel01": "lt --port 3000",
     "localtunnel02": "lt --port 3000 -h 'https://serverless.social' -s me00243070422",
-    "share": "npm-run-all --parallel start localtunnel02"
+    "share": "npm-run-all --parallel start localtunnel02",
+    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint:watch": "npm run lint -- --watch"
   },
   "author": "Cory House",
   "license": "MIT",
