@@ -13,7 +13,7 @@ export default {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
     //filename: "bundle.js",
-    filename: "[name].js",
+    filename: "[name].[chunkhash].js",
   },
   plugins: [
     // Create HTML file that includes reference to bundled JS.
